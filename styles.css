@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    width: 150px;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.popup {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form{
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"],
+    input[type="number"],
+    textarea,
+    input[type="date"],
+    button[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.popup-content {
+    position: relative;
+    background-color: white;
+    margin:  auto;
+    margin-top: 38px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 28%;
+}
+h2{
+    margin-left: 5px;
+}
+.close {
+    position: absolute;
+    top: 0px;
+    right: 18px;
+    font-size: 50px;
+    cursor: pointer;
+}

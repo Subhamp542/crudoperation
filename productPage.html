@@ -1,0 +1,46 @@
+<div>
+    <header>
+        <h1>Product Table</h1>
+        <input type="text" ng-model="searchQuery" placeholder="Search..." ng-change="search()">
+        <button ng-click="search()">Search</button>
+        <button ng-click="addProduct()">Add</button>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th ng-click="arrange('id')">ID</th>
+                <th ng-click="arrange('name')">Name</th>
+                <th ng-click="arrange('brand')">Brand</th>
+                <th ng-click="arrange('category')">Category</th>
+                <th ng-click="arrange('price')">Price</th>
+                <th ng-click="arrange('description')">Description</th>
+                <th ng-click="arrange('createdAt')">Created At</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in paginatedProducts()">
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.brand }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.createdAt }}</td>
+                <td>
+                    <button ng-click="editProduct(product.id)">Edit</button>
+                    <button ng-click="deleteProduct(product)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <button ng-click="prevPage()" ng-disabled="currentPage === 1">Previous</button>
+        <span ng-repeat="page in pages">
+            <button ng-click="setPage(page)" ng-class="{active: currentPage === page}">{{ page }}</button>
+        </span>
+        <button ng-click="nextPage()" ng-disabled="currentPage === pages.length">Next</button>
+    </div>
+</div>
